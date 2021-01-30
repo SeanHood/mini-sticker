@@ -150,12 +150,12 @@
       <input name="top_colour" bind:value={top_colour} type="text">
     </span>
     <span>
-      <label for="font_size">Font Size:</label>
-      <input name="font_size" bind:value={font_size} type="number">
-    </span>
-    <span>
       <label for="name">Name:</label>
       <input name="name" bind:value={name}>
+    </span>
+    <span>
+      <label for="font_size">Font Size:</label>
+      <input name="font_size" bind:value={font_size} type="number">
     </span>
     <hr />
     <span>
