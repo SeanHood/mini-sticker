@@ -1,5 +1,6 @@
 <svelte:head>
   <script async defer data-domain="sticker.snhd.co" src="https://plausible.io/js/plausible.js"></script>
+  <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
 </svelte:head>
 
 <script>
@@ -43,6 +44,8 @@
   }
 
   function downloadPng(url, filename) {
+
+    plausible('Download')
 
     const a = document.createElement('a');
     a.href = url;
