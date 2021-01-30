@@ -17,7 +17,7 @@
       svg_xml = (new XMLSerializer()).serializeToString(document.getElementById('svg'));
 
       var img = new Image();
-      img.src = "data:image/svg+xml;base64," + btoa(svg_xml);
+      img.src = "data:image/svg+xml;base64," + btoa(unescape(encodeURIComponent(svg_xml)));
 
       var canvas = document.createElement('canvas');
 
