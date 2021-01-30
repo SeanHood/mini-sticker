@@ -1,3 +1,7 @@
+<svelte:head>
+  <script async defer data-domain="sticker.snhd.co" src="https://plausible.io/js/plausible.js"></script>
+</svelte:head>
+
 <script>
   let top_colour = '#BD2A4E'
   let name = 'First Last'
