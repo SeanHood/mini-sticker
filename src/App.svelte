@@ -213,6 +213,10 @@
   </p>
 
   <p>
-    Made by <a href="https://twitter.com/SeanHood">Sean Hood</a>, the original inspiration for this project came from <a href="https://github.com/SeanHood/mooministickers">SeanHood/mooministickers</a>.
+    Made by <a href="https://twitter.com/SeanHood">Sean Hood</a>, the original version of this project came from <a href="https://github.com/SeanHood/mooministickers">SeanHood/mooministickers</a>.
+  </p>
+
+  <p>
+    Soon to be opensourced, there's a few more bits I want to get tidied first. Built as an excuse to learn <a href="https://svelte.dev">Svelte</a>, SVG on the web and CSS Grid. Hosted on Vercel.
   </p>
 </footer>
