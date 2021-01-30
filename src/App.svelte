@@ -132,7 +132,7 @@
 </style>
 
 <header>
-  <h1>Moo Mini Sticker Maker</h1>
+  <h1>Mini Sticker Maker</h1>
 </header>
 
 <div class="container">
