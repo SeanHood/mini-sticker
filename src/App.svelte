@@ -4,17 +4,18 @@
 </svelte:head>
 
 <script>
-  let top_colour = '#BD2A4E'
-  let name = 'First Last'
-  let font_size = '160'
-  let number = '00000000000'
-  let email = 'first@last.com'
 
-  let svg_xml
+  var sticker = {
+    top_colour: '#BD2A4E',
+    name: 'First Last',
+    font_size: '160',
+    number: '00000000000',
+    email: 'first@last.com',
+  }
 
   async function exportSVG() {
 
-      svg_xml = (new XMLSerializer()).serializeToString(document.getElementById('svg'));
+      let svg_xml = (new XMLSerializer()).serializeToString(document.getElementById('svg'));
 
       var img = new Image();
       img.src = "data:image/svg+xml;base64," + btoa(unescape(encodeURIComponent(svg_xml)));
@@ -39,7 +40,7 @@
 
           var png = canvas.toDataURL("image/png");
 
-          downloadPng(png, "moo-" + name.replace(" ", "_") + top_colour + ".png");
+          downloadPng(png, "ministicker-" + sticker.name.replace(" ", "_") + sticker.top_colour + ".png");
       }
   }
 
@@ -66,9 +67,6 @@
   * {
 		box-sizing: border-box;
 	}
-
-  @import url('https://rsms.me/inter/inter.css');
-  svg { font-family: 'Inter', sans-serif; }
 
 	input {
 		height: 40px;
@@ -146,25 +144,25 @@
   <div class="config">
     <span class="colour_input">
       <label for="top_colour">Colour:</label>
-      <input name="top_colour" bind:value={top_colour} type="color">
-      <input name="top_colour" bind:value={top_colour} type="text">
+      <input name="top_colour" bind:value={sticker.top_colour} type="color">
+      <input name="top_colour" bind:value={sticker.top_colour} type="text">
     </span>
     <span>
       <label for="name">Name:</label>
-      <input name="name" bind:value={name}>
+      <input name="name" bind:value={sticker.name}>
     </span>
     <span>
       <label for="font_size">Font Size:</label>
-      <input name="font_size" bind:value={font_size} type="number">
+      <input name="font_size" bind:value={sticker.font_size} type="number">
     </span>
     <hr />
     <span>
       <label for="number">Number:</label>
-      <input name="number" bind:value={number}>
+      <input name="number" bind:value={sticker.number}>
     </span>
     <span >
       <label for="email">Email:</label>
-      <input name="email" bind:value={email}>
+      <input name="email" bind:value={sticker.email}>
     </span>
   </div>
 
@@ -186,17 +184,17 @@
             #BD2A4E - Pink
         -->
           <svg height="480" width="960">
-            <rect x="0" y="0" width="100%" height="100%" fill="{top_colour}" />
-            <text x="50%" y="55%" font-family="Nunito" alignment-baseline="central" text-anchor="middle" font-size="{font_size}" fill="white">
-              {name}
+            <rect x="0" y="0" width="100%" height="100%" fill="{sticker.top_colour}" />
+            <text x="50%" y="55%" font-family="Nunito" alignment-baseline="central" text-anchor="middle" font-size="{sticker.font_size}" fill="white">
+              {sticker.name}
             </text>
           </svg>
 
           <svg y="50%" height="480" width="960">
             <rect x="0" y="0" width="100%" height="100%" fill="#ffffff" />
             <text x="50%" y="20%" font-family="Nunito" alignment-baseline="central" text-anchor="middle" font-size="80" fill="black">
-              <tspan x="50%" dy="1.2em">{number}</tspan>
-              <tspan x="50%" dy="1.2em">{email}</tspan>
+              <tspan x="50%" dy="1.2em">{sticker.number}</tspan>
+              <tspan x="50%" dy="1.2em">{sticker.email}</tspan>
             </text>
           </svg>
 
