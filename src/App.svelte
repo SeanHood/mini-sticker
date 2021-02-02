@@ -222,6 +222,6 @@
   </p>
 
   <p>
-    Soon to be opensourced, there's a few more bits I want to get tidied first. Built as an excuse to learn <a href="https://svelte.dev">Svelte</a>, SVG on the web and CSS Grid. Hosted on Vercel.
+    Soon to be opensourced, there's a few more bits I want to get tidied first. Built as an excuse to learn <a href="https://svelte.dev">Svelte</a>, SVG on the web and CSS Grid. Hosted on <a href="https://vercel.com">Vercel</a>.
   </p>
 </footer>
